@@ -2,6 +2,7 @@ use crate::ethereum::EthConfiguration;
 use sc_cli::RunCmd;
 
 #[derive(Debug, clap::Parser)]
+#[command(version = env!("CARGO_PKG_VERSION"))]
 pub struct Cli {
     #[command(subcommand)]
     pub subcommand: Option<Subcommand>,
